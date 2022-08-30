@@ -23,7 +23,8 @@ OPTIONS:
     -l, --length-str <LENGTH_STR>    The length of the split in terms of lines, like e.g. 50
     -p, --pattern <PATTERN>          The pattern used to list files, like e.g. *.csv or
                                      /media/**/*.csv
-    -t, --target-dir <TARGET_DIR>    A target directory for all of the files
-(base) PS C:\development\playground\rust\first_steps\splitter>
+    -t, --target-dir <TARGET_DIR>    An optional target directory for all of the files. If not
+                                     specified the split files will be in the folder of the original
+                                     file
 
 ```
