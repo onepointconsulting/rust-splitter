@@ -22,7 +22,7 @@ impl Iterator for StringContainer<'_> {
             buf_str += x.unwrap().to_string().as_str();
             if counter % STR_LIMIT == 0 {
                 let copy = buf_str.to_string();
-                buf_str = create_blank();
+                buf_str.clear();
                 return Some(copy);
             }
         }
@@ -32,7 +32,6 @@ impl Iterator for StringContainer<'_> {
             return None;
         }
     }
-
 }
 
 fn string_iter(reader: Reader<&File>) -> StringContainer {
