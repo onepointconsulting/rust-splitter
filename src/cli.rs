@@ -11,5 +11,8 @@ pub(crate) struct Cli {
     pub(crate) length_str: u16,
     /// An optional target directory for all of the files. If not specified the split files will be in the folder of the original file.
     #[clap(short, long)]
-    pub(crate) target_dir: Option<String>
+    pub(crate) target_dir: Option<String>,
+    /// A regular expression used to split the lines
+    #[clap(short, long)]
+    pub(crate) record_regex: Option<String>
 }

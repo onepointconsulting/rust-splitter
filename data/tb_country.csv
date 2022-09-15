@@ -1,0 +1,115 @@
+code,name,event_template_url,id,gmt_offset,remarks
+at,Austria,,1,,Country in Middle Europe
+de,Germany,,3,,Federal Republic of Germany
+au,Australia,,6,,Australia
+fr,France,,7,,France
+cz,Czech Republic,,8,,Czech Republic
+us,USA,,9,,United Stated of America
+pl,Poland,,10,,Polska
+pe,Peru,,11,,Peru - South America
+ru,Russia,,12,,Russia
+my,Malaysia,,13,,Malaysia in Asia
+in,India,,14,,India
+bj,Benin,,16,,Benin - Africa
+bf,Burkina Faso,,17,,Burkina Faso - Africa
+bi,Burundi,,18,,Burundi - Africa
+cg,Congo,,19,,Congo - Africa
+gq,Eq Guinea,,20,,Eq Guinea - Africa
+er,Eritrea,,21,,Eritrea - Africa
+gm,Gambia,,22,,Gambia - Africa
+gh,Ghana,,23,,Ghana - Africa
+gn,Guinea,,24,,Guinea - Africa
+ke,Kenya,,25,,Kenya - Africa
+ls,Lesotho,,26,,Lesotho
+lr,Liberia,,27,,Liberia - Africa
+mg,Madagascar,,28,,Madagascar - Africa
+mw,Malawi,,29,,Malawi - Africa
+ml,Mali,,30,,Mali - Africa
+mu,Mauritius,,31,,Mauritius - Africa
+mz,Mozambique,,32,,Mozambique - Africa
+na,Namibia,,33,,Namibia - Africa
+ng,Nigeria,,34,,Nigeria - Africa
+re,Reunion,,35,,Reunion - Africa
+sn,Senegal,,36,,Senegal
+sc,Seychelles,,37,,Seychelles - Africa
+sl,Sierra Leone,,38,,Sierra Leone
+za,South Africa,,39,,South Africa
+tz,Tanzania,,40,,Tanzania - Africa
+ug,Uganda,,41,,Uganda - Africa
+zm,Zambia,,42,,Zambia - Africa
+zw,Zimbabwe,,43,,Zimbabwe - Africa
+il,Israel,,44,,Israel
+is,Iceland,,45,,Iceland
+ch,Switzerland,,46,,Switzerland - That country in the Alps
+ro,Romania,,48,,Romania
+fi,Finland,,49,,Finland
+th,Thailand,,50,,Thailand
+be,Belgium,,51,,Belgium - Europe
+it,Italy,,52,,Italy - Bella Italia
+ca,Canada,,54,,Canada
+kr,Korea,,55,,South Korea
+se,Sweden,,56,,Sweden - Northern country
+no,Norway,,57,,Norway - Northern country
+dk,Denmark,,58,,Denmark - Northern country
+ar,Argentina,,59,,Argentina
+cl,Chile,,60,,Chile
+gr,Greece,,72,,Greece - Europe
+ve,Venezuela,,73,,Venezuela - Latin America
+xx,Global,,61,,This is a container for global initiatives
+mx,Mexico,,62,,Mexico
+mn,Mongolia,,74,,Mongolia - Asia
+co,Colombia,,64,,Colombia - South America
+uy,Uruguay,,65,,Uruguay - Latin America
+py,Paraguay,,66,,Paraguay - South America
+sv,El Salvador,,67,,El Salvador
+cr,Costa Rica,,68,,Costa Rica - Central America
+pa,Panama,,69,,Panama - Central Americas
+ec,Ecuador,,70,,Ecuador - South America
+gt,Guatemala,,71,,Guatemala - South America
+nz,New Zealand,,75,,New Zealand - Australia
+ph,Philippines,,76,,Philippines - Asia
+sh,Singapore,,77,,Singapore Asia
+kh,Cambodia,,78,,Cambodia - Asia
+jp,Japan,,79,,Japan - Asia
+ID,Indonesia,,80,,Indonesia - Australasia
+hu,Hungary,,81,,Hungary - Europe
+bo,Bolivia,,82,,Bolivia - Latin America
+gl,Germany NL,,85,,For Germany
+go,Global Events,,84,,Global Organisation for International events
+aq,Antarctica,,86,,Demo Country
+tt,Trinidad,,87,,Trinidad and Tobago
+gy,Guyana,,88,,Guyana
+sr,Suriname,,89,,Suriname
+do,Dominican Republic,,90,,Dominican Republic
+an,Curacao,,91,,Curacao
+bq,Bonaire,,92,,Bonaire
+bb,Barbados,,93,,Barbados
+lc,St Lucia,,94,,St Lucia
+ag,Antigua,,95,,Antigua
+kn,St Kitts,,96,,St Kitts
+mf,St Maarten,,97,,St Maarten
+jm,Jamaica,,98,,Jamaica
+gd,Grenada,,99,,Grenada
+aw,Aruba,,100,,Aruba
+bw,Botswana,,101,,OpenEMM
+pr,Puerto Rico,,102,,Puerto Rico
+UA,Ukraine,,103,,Ukraine - Russian region
+BY,Belarus,,104,,Belarus - Russian region
+KZ,Kazakhstan,,105,,Kazakhstan - Russian region
+TJ,Tajikistan,,106,,Tajikistan
+GE,Georgia,,107,,Georgia - Part of Russian zone
+AM,Armenia,,108,,Armenia - Russian Zone
+AZ,Azerbaijan,,109,,Azerbaijan - Russian Zone
+EE,Estonia,,110,,Estonia - Russian Zone
+LV,Latvia,,111,,Latvia - Russian Zone
+LT,Lithuania,,112,,Lithuania - Russian Zone
+te,Temporary,,113,,Temporary organisations
+CU,Cuba,,114,,Cuba - in the Caribean
+hn,Honduras,,115,,Honduras in the Caribean
+ci,Ivory Coat,,116,,Cote d'Ivoire
+es,Spain,https://brahmakumaris.es/actividades/agenda/centros/singleevent/@eventId@,5,,Country near Portugal
+IR,Ireland,https://brahmakumaris.ie/events/singleevent/@eventId@,53,,Ireland
+pt,Portugal,https://www.brahmakumaris.pt/component/ems/singleevent/@eventId@,4,,Country near Spain
+br,Brasil,https://www.brahmakumaris.org.br/programacao/calendario/singleevent/@eventId@,15,-3,Brazil or Brasil
+uk,United Kingdom,https://brahmakumaris.uk/event/?id=@eventId@,2,,Great Britain - England\, Scottland\, Wales and Northern Ireland
+ba,Bosnia,,117,2,Bosnia and Herzegovina

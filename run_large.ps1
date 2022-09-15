@@ -1,1 +1,0 @@
-.\target\debug\splitter.exe $args[0] $args[1]
