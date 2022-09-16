@@ -1,6 +1,6 @@
 use clap::Parser;
 
-/// Simple program used to split files using glob patterns
+/// Simple program used to split files using glob patterns. Files can be split by line (default mode) or using a regular expression.
 #[derive(Parser)]
 pub(crate) struct Cli {
     /// The pattern used to list files, like e.g. *.csv or /media/**/*.csv
