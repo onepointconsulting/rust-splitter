@@ -33,26 +33,53 @@ mod tests {
 
     #[test]
     fn test_splitter_with_regex() {
+        let length: u16 = 50;
         let target_path = "/tmp";
-        let length = 50;
-        let cli = Cli {
-            pattern: String::from("./data/tb_country.csv"),
-            length_str: length,
-            target_dir: Some(target_path.to_string()),
-            record_regex: Some(String::from("(?<!\\\\)\r\n"))
-        };
+        let file_stem = "tb_country";
+        let cli = cli_provider(target_path, file_stem, length);
         read_file(cli);
         let splits = [1, 2, 3];
         for split in splits {
-            let expected_file = format!("{}/tb_country_{}.csv", target_path, split) .to_string();
+            let expected_file = format!("{}/{}_{}.csv", target_path, file_stem, split) .to_string();
             println!("{}", expected_file);
             let path = Path::new(&expected_file);
             let count = count_lines(path);
             assert!(path.exists());
-            if split < 3 {
+            if split < splits.len() {
                 assert_eq!(count as u16, length);
             }
         }
+    }
+
+    #[test]
+    fn test_splitter_with_regex_single() {
+        let length: u16 = 300;
+        let target_path = "/tmp";
+        let file_stem = "tb_country_copy";
+        let cli = cli_provider(target_path, file_stem, length);
+        read_file(cli);
+        let expected_file = format!("{}/{}_1.csv", target_path, file_stem);
+        let expected_path = Path::new(&expected_file);
+        assert!(expected_path.exists());
+    }
+
+    #[test]
+    fn test_splitter_with_regex_event_small() {
+        let length: u16 = 3;
+        let target_path = "/tmp";
+        let file_stem = "tb_event_small";
+        let cli = cli_provider(target_path, file_stem, length);
+        read_file(cli);
+    }
+
+    fn cli_provider(target_path: &str, file_stem: &str, length: u16) -> Cli {
+        let cli = Cli {
+            pattern: String::from(format!("./data/{}.csv", file_stem)),
+            length_str: length,
+            target_dir: Some(target_path.to_string()),
+            record_regex: Some(String::from("(?<!\\\\)\r?\n"))
+        };
+        cli
     }
 
     fn count_lines(path: &Path) -> i32{

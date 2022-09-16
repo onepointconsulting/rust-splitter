@@ -113,7 +113,7 @@ fn create_or_append(file_path: String, file_option: Option<File>, s: String) -> 
                 None
             }
             Ok(file) => {
-                file.borrow().write_all(content.as_bytes()).unwrap();
+                file.borrow().write_all(content.as_bytes());
                 Some(file)
             }
         }
@@ -124,7 +124,7 @@ fn create_or_append(file_path: String, file_option: Option<File>, s: String) -> 
                 None
             }
             Some(file) => {
-                file.borrow().write_all(content.as_bytes()).unwrap();
+                file.borrow().write_all(content.as_bytes());
                 Some(file)
             }
         }

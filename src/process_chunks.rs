@@ -5,7 +5,7 @@ use std::fs::{File};
 use utf8_read::Reader;
 use crate::{create_or_append, create_split_file_name, delete_on_start, split_data, split_start_predicate};
 
-const STR_LIMIT: usize = 1024 * 4;
+const STR_LIMIT: usize = 256;
 
 struct StringContainer<'a> {
     reader: Reader<&'a File>,
@@ -49,25 +49,31 @@ pub(crate) fn process_chunks_utf8(struct_data: StructData, separator: Regex) {
     let mut chunk_name: Cow<str> = Cow::from("");
     let mut split_rest = "".to_string();
     let mut line_count = 0;
-    let mut chunk_count = 1;
+    let mut chunk_count = 0;
     let mut file_option: Option<File> = None;
     for x in string_iter(reader) {
         let data_str = split_rest.to_string() + &x;
         let mut vec: Vec<String> = split_data::split_data(&data_str, &separator);
         split_rest = vec.pop().unwrap().clone();
         if !vec.is_empty() {
-            for chunk in vec.iter() {
+            for split in vec.iter() {
                 if split_start_predicate(length_str, line_count) {
-                    chunk_name = create_split_file_name(chunk_count, &path_string);
                     chunk_count += 1;
+                    chunk_name = create_split_file_name(chunk_count, &path_string);
                     delete_on_start(&mut chunk_name);
                 }
-                file_option = create_or_append(chunk_name.to_string(), file_option, chunk.to_string());
+                file_option = create_or_append(chunk_name.to_string(), file_option, split.to_string());
                 line_count += 1;
             }
         }
     }
-    create_or_append(chunk_name.to_string(), file_option, split_rest);
+
+    split_rest = split_rest.trim().to_string();
+    if (split_rest.len() > 0) {
+        chunk_count += 1;
+        chunk_name = create_split_file_name(chunk_count, &path_string);
+        create_or_append(chunk_name.to_string(), file_option, split_rest);
+    }
 }
 
 fn create_blank() -> String {
