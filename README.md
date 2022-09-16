@@ -1,7 +1,7 @@
 # Rust Splitter
 
-Simple splitter that can be used to split files line by line.
-It can choose files using recursive patterns. 
+Simple program used to split files using glob patterns. Files can be split by line (default mode) or
+using a regular expression. 
 
 ## Compilation
 
@@ -13,7 +13,8 @@ It can choose files using recursive patterns.
 
 ```
 splitter
-Simple program used to split files using glob patterns
+Simple program used to split files using glob patterns. Files can be split by line (default mode) or
+using a regular expression
 
 USAGE:
     splitter.exe [OPTIONS] --pattern <PATTERN> --length-str <LENGTH_STR>
