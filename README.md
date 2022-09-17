@@ -9,6 +9,12 @@ using a regular expression.
 & cargo build --release
 ```
 
+## Running tests
+
+```ps1
+& cargo test
+```
+
 ## Usage
 
 ```
@@ -35,4 +41,23 @@ OPTIONS:
     -t, --target-dir <TARGET_DIR>
             An optional target directory for all of the files. If not specified the split files will
             be in the folder of the original file
+```
+
+### Usage examples
+
+Generate files with 100 lines in folder .\data:
+
+```ps1
+.\target\release\splitter.exe -p .\data\acl_object_identity.csv -l 100
+```
+
+Generate files with 100 lines in folder .\tmp:
+
+```ps1
+.\target\release\splitter.exe -p .\data\acl_object_identity.csv -l 100 -t \tmp
+```
+
+Split files with 10000 lines with target folder `\tmp` using a regular expression `(?<!\\)\r\n` for splitting.
+```ps1
+.\target\release\splitter.exe -p ..\..\data\tb_event.csv -l 10000 -t \tmp --record-regex "(?<!\\)\r\n"
 ```
